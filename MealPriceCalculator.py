@@ -16,23 +16,26 @@ def meal_price_calculator():
   print(f'Sales tax: ${sales_tax} \nTotal: ${total}')
   
   wants_tip = input("Do you want to add a tip to support the waiter?, (please answer with y/n) \n")
-  
   if wants_tip == "y":
     recommended_amount = round(total * 0.1,2)
     print(f"The recommended tip amount is ${recommended_amount}, but feel free to include any other value you wish")
     tip_amount = float(input("What is the tip amount ?\n"))
     total = round(total + tip_amount,2)
-    print(f"Thanks for supporting the waiter, your new total with the tip is {total}")
+    print(f"Thanks for supporting the waiter, your new total with the tip is ${total}")
 
-  payment_amount = float(input("What is the payment amount ?\n"))
+  while True:
+        payment_amount = float(input("What is the payment amount ?\n"))
+        if payment_amount < total:
+            print("Insufficient funds. Please try again.")
+        else:
+            break
+
   change = round(payment_amount - total,2)
-  
-  if payment_amount < total:
-    print("Insufficient funds. Please try again.")
-    meal_price_calculator()
-    return
   
   print(f"Your change is: ${change}")
   print(f"Thanks for using our meal price calculator !")
 
 meal_price_calculator()
+
+while True:
+  pass
