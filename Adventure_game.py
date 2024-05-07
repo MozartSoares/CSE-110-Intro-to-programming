@@ -140,7 +140,7 @@ def main():
                 third_choice = ""
                 while third_choice not in ["A", "B"]:
                     third_choice = input("""
-                                        As you press forward, the bridge begins to creak alarmingly, threatening to give way at any moment but you manage to get to the other side.
+                                        As you press forward, the bridge starts o fall, but you manage to get to the other side.
                                         you look at your phone and realize it's about to die
                                         From here you have two options
                                         A: GIVE UP AND CALL YOUR FRIEND WHILE YOU STILL CAN FOR BACKUP TO RETURN HOME
