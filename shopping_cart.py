@@ -1,4 +1,4 @@
-#I've also added the quantity of the item as an extra information to store 
+#I've also added the quantity of the item as an extra information to store and display.
 
 def add_number(operation: str,items:list=[],new_item:str='',  ):
       if operation == 'quantity':
