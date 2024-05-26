@@ -113,20 +113,20 @@ def main():
         5. Quit""")
   
     option = input("please enter an action: ")
-  
-    if option == '1':
-      items,prices = add_item(items,prices)
-    elif option == '2':
-      view_cart(items,prices)
-    elif option == '3':
-      items,prices = remove_item(items,prices)
-    elif option == '4':
-      calculate_total(items,prices)
-    elif option == '5':
-      exit()
-      break
-    else:
-      print("Invalid option.")
+    match option:
+      case '1':
+        items,prices = add_item(items,prices)
+      case '2':
+        view_cart(items,prices)
+      case '3':
+        items,prices = remove_item(items,prices)
+      case '4':
+        calculate_total(items,prices)
+      case '5':
+        exit()
+        break
+      case _:
+        print("Invalid option.")
 
 main()
 
